@@ -52,7 +52,7 @@ function renderAnimals() {
     const charImg = new Image();
 
     // 16. Set the source by concatenating the path to the character jpg
-    charImg.src = `images/chars/char-${animal.chr}.jpg`;
+    charImg.src = `images/chars/char-${animal.chi}.jpg`;
 
     // 17. Sssign class to character img
     charImg.className = "chinese-char";
@@ -83,11 +83,12 @@ function renderAnimals() {
 
     // 23. Run a loop that starts w current year, and concats
     // years backwards in time, in increments of 12 years
-    let yearsStr = `<span> ${animal.yr} </span><br><br>`; // string of years begins w current year
+    let yearsStr = `<span> ${animal.year} </span><br><br>`; // string of years begins w current year
     for (let y = 12; y <= 120; y += 12) {
       // loop from 12-168 in increments of 12
-      yearsStr += animal.yr - y + "<br>"; // concat next year in the cycle
-    }
+      yearsStr += animal.year - y + "<br>"; // concat next year in the cycle
+    }267586
+
     yearsP.innerHTML = yearsStr; // output animal yr string to p-tag
 
     // 24. Make info div, which sits on top of divvy and appears-disappears on click
